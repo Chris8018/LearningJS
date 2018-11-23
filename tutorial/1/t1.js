@@ -1,6 +1,6 @@
-var name = prompt("Kimo no na wa? (Your name?)");
+var fName = prompt("Kimo no na wa? (Your name?)");
 
-if (name != null)
-    document.getElementById("t1").innerHTML = "Hello " + name;
+if (fName !== null && fName.length > 0)
+    document.getElementById("t1").innerHTML = "Hello " + fName;
 else
-    alert("Name please");
+    alert("Enter name next time please");
