@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial 9</title>
+    <link type="text/css" rel="stylesheet" href="/LearningJS/style1.css">
+
+</head>
+<body>
+    <h1>Tutorial 9</h1>
+    <a href="/LearningJS/index.html">Home Page</a>
+    <!--Description-->
+    <p>Event handling</p>
+    <a href="https://www.w3schools.com/jsref/obj_event.asp">W3S event table</a>
+    <p>.keyCode, .charCode and .which are deprecated</p>
+    <!--Tutorial 9-->
+    <!--Inline script-->
+    <br/>
+    <a href="javascript:void(0)" onclick="alert('Hello')"> Click me!!!</a>
+    <br/>
+    <a href="javascript:void(0)" onclick="openAlert('Smooth')"> Click me please!!!</a>
+    <br/>
+    <a href="javascript:void(0)"
+    onmouseover="this.style.color='red'"
+    onmouseout="this.style.color='blue'"
+    ondblclick="this.text='How dare you!!'"
+    onmousedown="this.text='Get away from me'"
+    onmouseup="this.text='You are dead to me!'"> Don't touch me!!!</a>
+    <br/>
+    <input type="text" id="rInput"
+           onchange="var dataEntered=document
+    .getElementById('rInput').value;
+    alert('User typed ' + dataEntered)">
+    <br/>
+    <!--External script-->
+    <form action="#" id="sampForm">
+        <input id="charInput" type="text">
+
+        <p id="keyData">Key data</p>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+    <br/>
+    <img src="tigrex_magma.png" id="logo">
+    <br/>
+    <button id="logoButton">Get logo</button>
+    <br/>
+    <input id="mouseInput" type="text" size="30">
+    <br/>
+    Mouse X: <input type="text" id="mouseX">
+    <br/>
+    Mouse Y: <input type="text" id="mouseY">
+    <br/>
+    <button id="clearI">Clear Inputs</button>
+
+    <script type="text/javascript" src="t9.js"></script>
+
+</body>
+</html>
