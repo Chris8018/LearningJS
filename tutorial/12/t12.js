@@ -37,3 +37,12 @@ function Customer(name, street, city, state, email, balance) {
         this.balance += amount;
     };
 }
+
+// Static (shared) var between all Customer obj
+Customer.prototype.isCreditAvailable = true;
+
+// Static (shared) func between all Customer obj
+// This also OVERRIDE toString() func
+Customer.prototype.toString = () => {
+    return "Too lazy to implement :(";
+};
