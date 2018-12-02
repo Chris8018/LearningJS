@@ -37,8 +37,26 @@ document.childNodes[1].style.backgroundColor = "#FAEBD7"; // change bg color of 
 var sDiv= document.getElementById("sampDiv"); // get all node with id sampDiv
 // Space/Indentation can be caught as node (text node)
 // JS can be confuse by text node
+// How to handle that? delete/minimize whitespace
+// nodeName, nodeType, firstNode, lastNode
 sDiv.childNodes[0].style.backgroundColor = "#F0FFFF"; // change bg color of 1st node inside tag with id sampDiv
 
 sDiv.childNodes[0].childNodes[1].style.backgroundColor = "#BFAFB2"; // change bg color of 2nd node of the 1st node inside tag with id sampDiv
 
+var nLogo = document.getElementById("logo");
+console.log({"logo hasAttribute alt": nLogo.hasAttribute("alt")});
+nLogo.setAttribute("alt", "HEHEHEHEHE")
+console.log({"logo Attribute alt value": nLogo.getAttribute("alt")});
 
+var attributeList = document.getElementById("logo").attributes;
+for (let i = 0; i < attributeList.length; i++) {
+    console.log(attributeList[i].nodeName + ": " + attributeList[i].nodeValue);
+}
+
+var paragraphT = document.createElement("p");
+paragraphT.setAttribute("id", "paragraphT");
+paragraphT.innerHTML = "Duis aute irure dolor in reprehenderit in voluptate velit esse. ";
+
+sDiv.appendChild(paragraphT);
+
+sDiv.insertBefore(paragraphT, sDiv.childNodes[0]);
