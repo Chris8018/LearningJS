@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial 13</title>
+    <link type="text/css" rel="stylesheet" href="/LearningJS/style1.css">
+
+</head>
+<body>
+    <h1>Tutorial 13</h1>
+    <a href="/LearningJS/index.html">Home Page</a>
+    <!--Description-->
+    <p>Form Validation</p>
+    <!--Tutorial 13-->
+    <div>
+        Enter Name:
+        <input id="name" name="name" type="text" size="30"
+               onblur="isTheFieldEmpty(this, document.getElementById('nameHelp'))"/>
+        <br/>
+        <span id="nameHelp"></span>
+    </div>
+
+    <script type="text/javascript" src="t13.js"></script>
+
+</body>
+</html>
